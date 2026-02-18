@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUXÍLIO DE MIRA PRO - V12</title>
+    <style>
+        body {
+            background: #0a0a0a; color: white; font-family: 'Arial', sans-serif;
+            display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;
+            background-image: linear-gradient(135deg, #1a0033 0%, #000 100%);
+        }
+        /* MIRA ROJA ULTRA PEQUEÑA */
+        #dot {
+            position: fixed; top: 50%; left: 50%; width: 4px; height: 4px;
+            background: red; border-radius: 50%; transform: translate(-50%, -50%);
+            z-index: 9999; display: none; box-shadow: 0 0 8px red; pointer-events: none;
+        }
+        .panel {
+            background: rgba(15, 15, 15, 0.95); width: 350px; padding: 20px;
+            border: 2px solid #9133ff; border-radius: 15px; box-shadow: 0 0 25px #9133ff;
+            text-align: center;
+        }
+        .url-google {
+            background: #111; padding: 8px; font-size: 10px; color: #888;
+            border: 1px dashed #555; margin-bottom: 15px; border-radius: 5px;
+        }
+        .scroll-options { height: 300px; overflow-y: auto; text-align: left; padding-right: 10px; }
+        .option {
+            display: flex; align-items: center; background: #1a1a1a;
+            margin: 5px 0; padding: 10px; border-radius: 8px; font-size: 12px;
+            border-left: 3px solid transparent; transition: 0.3s;
+        }
+        .option:hover { border-left-color: #9133ff; background: #222; }
+        input[type="checkbox"] { margin-right: 12px; accent-color: #9133ff; transform: scale(1.2); cursor: pointer; }
+        .btn-main {
+            background: linear-gradient(90deg, #9133ff, #e60073); border: none;
+            padding: 15px; width: 100%; color: white; font-weight: bold;
+            border-radius: 10px; cursor: pointer; margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="dot"></div>
+
+<div class="panel">
+    <h2 style="margin:0; font-size: 20px;">AUXÍLIO DE MIRA PRO</h2>
+    <div class="url-google">🔍 google.com/search?q=auxilio-mira-ff-v12-pro</div>
+
+    <div class="scroll-options">
+        <div class="option"><input type="checkbox" onchange="exec(this, 'dot')"> 🔴 Mira Pro (Punto Rojo Central)</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> ⚡ Sensibilidad General +500%</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🎯 Auto-Ajuste de DPI (1200 DPI)</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🚫 NoRecoil Estabilizador</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🚀 FPS Unlock (90 FPS Constantes)</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🖱️ Respuesta Táctil Instantánea</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 📶 Reducción de Ping (Ping Bajo)</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🔋 Modo Alto Rendimiento CPU</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🛠️ Limpieza de Memoria RAM</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🕵️ Anti-Ban Protocol V12</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 📈 Suavizado de Movimiento</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🔫 Macro de Agachado Rápido</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🧊 Enfriamiento de Dispositivo</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 🌪️ Sensibilidad de Respuesta 0ms</div>
+        <div class="option"><input type="checkbox" onchange="exec(this)"> 💎 Gráficos Optimizados</div>
+    </div>
+
+    <button class="btn-main">SISTEMA EJECUTADO ✅</button>
+</div>
+
+<script>
+    function exec(cb, type) {
+        if(type === 'dot') {
+            document.getElementById('dot').style.display = cb.checked ? 'block' : 'none';
+        }
+        if(cb.checked) {
+            console.log("Activando: " + cb.parentElement.innerText);
+            // Simulación de ejecución inmediata
+        }
+    }
+</script>
+
+</body>
+</html>
